@@ -1,0 +1,17 @@
+SELECT last_name, salary FROM employees WHERE salary > 12000
+
+SELECT last_name, department_id FROM employees WHERE employee_id=176;
+
+SELECT last_name, salary FROM employees WHERE salary NOT BETWEEN 5000 AND 12000;
+
+SELECT last_name AS Employee, salary "Monthly Salary", department_id  FROM employees
+WHERE ("Monthly Salary" BETWEEN 5000 AND 12000) AND department_id IN (2,5);
+
+SELECT * FROM employees;
+
+SELECT last_name,job_id, salary FROM employees 
+WHERE job_id IN (16,10) AND  salary NOT IN (2500,3500,7000); 
+
+SELECT e.last_name,job_title,e.salary FROM employees e JOIN jobs j
+ON e.job_id = j.job_id WHERE e.job_id IN (16,10) AND  e.salary NOT IN (2500,3500,7000); 
+
